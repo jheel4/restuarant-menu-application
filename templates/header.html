@@ -1,0 +1,14 @@
+<div class="row top-menu">
+	<div class="col-md-6">
+		<a href="{{url_for('showRestaurants')}}">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Show All Restaurants
+		</a>
+	</div>
+	<div class="col-md-6 text-right">
+		{% if 'username' in login_session %}
+			<a href='/login'><span class="glyphicon" aria-hidden='true'></span>Login to continue</a>
+		{% else %}
+			<a href="{{url_for('disconnect')}}"><span class="glyphicon" aria-hidden='true'></span>Disconnect</a>
+		{% endif %}
+	</div>
+</div>
